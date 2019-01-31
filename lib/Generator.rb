@@ -1,7 +1,7 @@
-require_relative 'randomGenerator/RandomCityJson'
+require_relative 'randomGenerator/RandomCityJson.rb'
 
 class Generator
-  def cities
+  def city
     RandomCityJson.new
   end
 end

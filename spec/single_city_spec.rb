@@ -1,14 +1,14 @@
  require 'spec_helper'
+
  describe 'Open Weather API ' do
  
-  #  before(:all) do
+    before(:all) do
 
-  #    @json_length = Generator.new.cities.generate_random_cities.retrieve_json_length
+    @json_length = Generator.new.city.print_data
   #    @random_json_city  = Generator.new.cities.generate_random_cities(rand(0..@json_length))
-  # end
+    @json_length.class 
+        
 
-  it 'should equal 1' do
-    expect(1).to eql(1)
-  end
+end
 
 end

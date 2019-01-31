@@ -1,9 +1,9 @@
 require 'json'
 
 class RandomCityJson
-  attr_accessor :json_length
+  # attr_accessor :json_length
 
-  def initialize
+  def read_file
     @json_data = JSON.parse(File.read('city_list.json'))
   end
 
@@ -14,12 +14,11 @@ class RandomCityJson
   def retrieve_json_length
     json_length = @json_data.length
   end
-  
+
   def print_data
    @json_data
   end
 end
-
 
 test = RandomCityJson.new
 p test.print_data

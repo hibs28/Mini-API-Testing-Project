@@ -1,8 +1,8 @@
 require 'rspec'
 require 'json'
 require 'dotenv'
-require_relative '../lib/OpenWeatherIO'
-require_relative '../lib/Generator'
+require_relative '../lib/OpenWeatherIO.rb'
+require_relative '../lib/Generator.rb'
 
 Dotenv.load('.env')
 
