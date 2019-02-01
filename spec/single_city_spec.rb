@@ -59,10 +59,37 @@
       expect(@api_city.retrieve_main_humidity).to be_kind_of(Integer)
     end
 
-    it 'should be a integer for main pressure' do 
-      expect(@api_city.retrieve_main_pressure).to be_kind_of(float)
+    it 'should be a integer for main temp min' do 
+      expect(@api_city.retrieve_main_temp_min).to be_kind_of(Float)
     end
   end
+
+  context 'checking data types from the JSON file' do 
+    it 'should be an integer for id' do 
+      expect(@random_city_info['id']).to be_kind_of(Integer)
+    end
+
+    it 'should be an string for name' do 
+      expect(@random_city_info['name']).to be_kind_of(String)
+    end
+
+    it 'should be an string for country' do 
+      expect(@random_city_info['country']).to be_kind_of(String)
+    end
+
+    it 'should be an hash for coordinates' do 
+      expect(@random_city_info['coord']).to be_kind_of(Hash)
+    end
+
+    it 'should be an float for longitude' do 
+      expect(@random_city_info['coord']['lon']).to be_kind_of(Float)
+    end
+    
+    it 'should be an float for latitude' do 
+      expect(@random_city_info['coord']['lat']).to be_kind_of(Float)
+    end
+  end
+
   
 end
 

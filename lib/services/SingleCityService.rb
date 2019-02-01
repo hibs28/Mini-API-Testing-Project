@@ -57,7 +57,7 @@ class SingleCityService
   end
 
   def retrieve_main_temp
-    retrieve_main['temp']
+    retrieve_main.first['temp']
   end
 
   def retrieve_main_pressure
