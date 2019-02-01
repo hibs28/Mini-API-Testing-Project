@@ -20,8 +20,8 @@
     it 'should be a float for latitude' do 
       expect(@api_city.retrieve_latitude).to be_kind_of(Float)
     end
-    it 'should be an array for weather' do 
-      expect(@api_city.retrieve_weather).to be_kind_of(Array)
+    it 'should be a hash for weather' do 
+      expect(@api_city.retrieve_weather).to be_kind_of(Hash)
     end
     it 'should be a integer for weather id' do 
       expect(@api_city.retrieve_weather_id).to be_kind_of(Integer)
@@ -37,6 +37,30 @@
 
     it 'should be a string for weather icon' do 
       expect(@api_city.retrieve_weather_icon).to be_kind_of(String)
+    end
+
+    it 'should be a string for base' do 
+      expect(@api_city.retrieve_base).to be_kind_of(String)
+    end
+
+    it 'should be a hash for main' do 
+      expect(@api_city.retrieve_main).to be_kind_of(Hash)
+    end
+
+    it 'should be a float for main temp' do 
+      expect(@api_city.retrieve_main_temp).to be_kind_of(Float)
+    end 
+    
+    it 'should be a integer for main pressure' do 
+      expect(@api_city.retrieve_main_pressure).to be_kind_of(Integer)
+    end
+
+    it 'should be a integer for main humidity' do 
+      expect(@api_city.retrieve_main_humidity).to be_kind_of(Integer)
+    end
+
+    it 'should be a integer for main pressure' do 
+      expect(@api_city.retrieve_main_pressure).to be_kind_of(float)
     end
   end
   

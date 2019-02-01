@@ -29,15 +29,15 @@ class SingleCityService
   end
 
   def retrieve_weather
-    @json_api_result['weather']
+    @json_api_result['weather'][0]
   end
 
   def retrieve_weather_id
-    retrieve_weather.first['id']
+    retrieve_weather['id']
   end
 
   def retrieve_weather_main
-    retrieve_weather.first['main']
+    retrieve_weather['main']
   end
 
   def retrieve_weather_description
