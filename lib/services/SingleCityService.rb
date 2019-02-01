@@ -33,11 +33,11 @@ class SingleCityService
   end
 
   def retrieve_weather_id
-    retrieve_weather['id']
+    retrieve_weather.first['id']
   end
 
   def retrieve_weather_main
-    retrieve_weather['main']
+    retrieve_weather.first['main']
   end
 
   def retrieve_weather_description
