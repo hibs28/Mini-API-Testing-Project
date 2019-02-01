@@ -57,7 +57,7 @@ class SingleCityService
   end
 
   def retrieve_main_temp
-    retrieve_main.first['temp']
+    retrieve_main['temp']
   end
 
   def retrieve_main_pressure
@@ -88,7 +88,7 @@ class SingleCityService
     retrieve_wind['speed']
   end
 
-  def retrieve_main
+  def retrieve_win_deg
     retrieve_wind['deg']
   end
 

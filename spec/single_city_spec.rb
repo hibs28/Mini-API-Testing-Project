@@ -6,7 +6,7 @@
   @json_data = Generator.new.city
   @random_city_info = Generator.new.city.generate_random_cities(rand(0..(@json_data.array_length)))
   @api_city = OpenWeatherIO.new.single_city_service
-  @api_city.call_from_api(@random_city_info['id'])
+  p @api_city.call_from_api(@random_city_info['id'])
   end
 
   context 'checking data types from requested information from the API' do 
@@ -44,6 +44,7 @@
     end
 
     it 'should be a hash for main' do 
+      p @api_city.retrieve_main
       expect(@api_city.retrieve_main).to be_kind_of(Hash)
     end
 
@@ -62,7 +63,13 @@
     it 'should be a integer for main temp min' do 
       expect(@api_city.retrieve_main_temp_min).to be_kind_of(Float)
     end
+    
+    it 'should be a integer for main temp min' do 
+      expect(@api_city.retrieve_main_temp_min).to be_kind_of(Float)
+    end
+    
   end
+
 
   context 'checking data types from the JSON file' do 
     it 'should be an integer for id' do 
@@ -84,7 +91,7 @@
     it 'should be an float for longitude' do 
       expect(@random_city_info['coord']['lon']).to be_kind_of(Float)
     end
-    
+
     it 'should be an float for latitude' do 
       expect(@random_city_info['coord']['lat']).to be_kind_of(Float)
     end
