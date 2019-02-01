@@ -14,9 +14,4 @@ class RandomCityJson
   def generate_random_cities(city_number)
     @json_data[city_number]
   end
-
-  def retrieve_id
-    @json_data[]
-  end
-
 end
