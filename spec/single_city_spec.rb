@@ -63,13 +63,12 @@
     it 'should be a integer for main temp min' do 
       expect(@api_city.retrieve_main_temp_min).to be_kind_of(Float)
     end
-    
+
     it 'should be a integer for main temp min' do 
       expect(@api_city.retrieve_main_temp_min).to be_kind_of(Float)
     end
     
   end
-
 
   context 'checking data types from the JSON file' do 
     it 'should be an integer for id' do 
@@ -95,10 +94,5 @@
     it 'should be an float for latitude' do 
       expect(@random_city_info['coord']['lat']).to be_kind_of(Float)
     end
-  end
-
-  
+  end  
 end
-
-
-# git blame 
